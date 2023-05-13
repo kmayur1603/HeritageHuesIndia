@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Community Positions</title>
+  </head>
+  <body>
+    <h1>Community Positions</h1>
+    <ul>
+      <li>President: <span id="president">John Doe</span></li>
+      <li>Secretary: <span id="secretary">Jane Smith</span></li>
+      <li>Treasurer: <span id="treasurer">Bob Johnson</span></li>
+      <li>Event Coordinator: <span id="event-coordinator">Sara Lee</span></li>
+      <li>Volunteer Coordinator: <span id="volunteer-coordinator">Tom Smith</span></li>
+    </ul>
+
+    <button onclick="showDropdown()">Replace</button>
+
+    <select id="dropdown" style="display: none;"></select>
+
+    <script>
+      function showDropdown() {
+        const positions = ['president', 'secretary', 'treasurer', 'event-coordinator', 'volunteer-coordinator'];
+        const dropdown = document.getElementById('dropdown');
+        dropdown.innerHTML = '';
+
+        positions.forEach(position => {
+          const option = document.createElement('option');
+          option.value = position;
+          option.text = position.charAt(0).toUpperCase() + position.slice(1);
+          dropdown.add(option);
+        });
+
+        dropdown.style.display = 'block';
+        dropdown.addEventListener('change', function() {
+          const selectedPosition = this.value;
+          const name = prompt(`Enter the name of the new ${selectedPosition}:`);
+          if (name) {
+            document.getElementById(selectedPosition).textContent = name;
+          }
+          dropdown.style.display = 'none';
+        });
+      }
+    </script>
+  </body>
+</html>
