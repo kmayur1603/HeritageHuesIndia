@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F4F4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            /* text-align: center; */
+            margin-top: 2rem;
+            color: #FF9933;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-top: 60px;
+            font-size: 1.2rem;
+        }
+
+        th {
+            background-color: #FF9933;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        td {
+            text-align: center;
+            padding: 0.5rem;
+            color: #FF9933;
+            /* border: 1px solid #ccc; */
+        }
+
+        tr:nth-child(even) {
+            background-color: #F4F4F4;
+        }
+
+        tr:hover {
+            background-color: 138813;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Community Members</h1>
+    <div id="output"></div>
+
+    <script>
+        let table = "<table>\n";
+        table += "<tr><th>Serial No.</th><th>Name</th><th>ID</th></tr>\n";
+
+        for (let i = 1; i <= 10; i++) {
+            let square = i * i;
+            let cube = i * i * i;
+            table += "<tr><td>" + i + "</td><td>" + square + "</td><td>" + cube + "</td></tr>\n";
+        }
+
+        table += "</table>";
+
+        document.getElementById("output").innerHTML = table;
+    </script>
+</body>
+
+</html>
