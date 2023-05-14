@@ -33,7 +33,7 @@
         <input type="email" placeholder="Email" name="email" style="color: orange" required>
         <input type="password" placeholder="Password" name="password" style="color: green" required>
         <input type="password" placeholder="Confirm Password" name="confirm_password" style="color: green" required>
-        <h6><a href="index.html" style="text-decoration: none">Already have an account? Sign in</a></h6>
+        <h6><a href="index.php" style="text-decoration: none">Already have an account? Sign in</a></h6>
         <button type="submit">Sign Up</button>
       </form>
       <?php
