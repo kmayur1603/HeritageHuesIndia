@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a Community</title>
+  <style>
+    /* style for left column */
+    html, body {
+  height: 99.6%;
+}
+body {
+  overflow: hidden;
+  background-color: #FF9933;
+}
+
+    .left-column {
+      display: inline-block;
+      vertical-align: top;
+      width: 60%;
+      height: 99.4%;
+      background-color:#FF9933;;
+    }
+
+    /* style for right column */
+    .right-column {
+      display: inline-block;
+      vertical-align: top;
+      width: 39.7%;
+      margin-top: 70px ;
+      height: 99.6%;
+    }
+    .benefits{
+        width: 700px;
+    }
+
+    /* style for form container */
+    .form-container {
+      background-color: #f8f8f8;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+      text-align: center;
+      margin: 0 auto;
+      width: 80%;
+      border: 2px solid #138813;
+    }
+    /* form{
+        margin-top: 70px;
+    } */
+
+    /* style for the form */
+    .form-control {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 2px solid #138813;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: blue;
+    }
+
+    /* style for the button */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: blue;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #1a73e8;
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-column">
+    <h1>The Benefits of Creating a Community</h1>
+    <div class="benefits">
+        <p>Meet Like-Minded People: Creating a community allows you to meet people who share your interests and passions, making it easier to find new friends and connect with others who "get" you.</p>
+        <p>Share Your Love of Something: Creating a community around a particular interest or hobby allows you to share your love of that thing with others who feel the same way. It's a great way to geek out together!</p>
+        <p>Learn New Things: Being a part of a community means you're constantly learning from others. You can pick up new skills, learn about new topics, and discover new passions you never knew you had.</p>
+        <p>Make a Difference: Creating a community around a cause or issue you care about can make a real difference in the world. Whether you're raising awareness for a particular cause, volunteering your time, or making a donation, your community can have a positive impact on the world around you.</p>
+    </div>
+  </div>
+  <div class="right-column">
+    <div class="form-container">
+      <h1>Create a Community</h1>
+      <form>
+        <label for="community-name">Community Name</label>
+        <input type="text" id="community-name" class="form-control" required>
+
+        <label for="community-city">City</label>
+        <input type="text" id="community-city" class="form-control" required>
+
+        <label for="community-state">State</label>
+        <input type="text" id="community-state" class="form-control" required>
+
+        <label for="community-purpose">Purpose</label>
+        <textarea id="community-purpose" class="form-control" rows="5"></textarea>
+
+        <label for="image-upload" class="btn btn-primary">Upload Image</label>
+        <input type="file" id="image-upload" accept="image/*" required>
+        <p> </p>
+        
+
+        <a href="index.html"></a><button type="submit" class="button">Create Community</button></a>
+      </form>
+    </div>
+  </div>
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+       event.preventDefault();
+       const communityName = document.getElementById('community-name').value;
+       const communityCity = document.getElementById('community-city').value;
+       const communityState = document.getElementById('community-state').value;
+       const communityPurpose = document.getElementById('community-purpose').value;
+       const communityImage = document.getElementById('image-upload').value;
+ 
+       const community = {
+          name: communityName,
+          city: communityCity,
+          state: communityState,
+          purpose: communityPurpose,
+          image: communityImage
+       };
+ 
+       let communities = JSON.parse(localStorage.getItem('communities')) || [];
+       communities.push(community);
+       localStorage.setItem('communities', JSON.stringify(communities));
+ 
+       window.location.href = 'index.html';
+    });
+ </script>
+ 
+</body>
+</html>

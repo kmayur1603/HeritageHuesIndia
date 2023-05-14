@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+
+/* INDEX PAGE */
+.navbar-custom {
+  background-color: #FF9933;
+  z-index: 10;
+}
+.navbar-brand{
+  font-family: 'Codystar', cursive!important;
+  font-size: 36px!important;
+  font-weight: 1000;
+  color: #000080!important;
+}
+.nav-pills .nav-item .button .navlink-active{
+  background-color: #000080!important;
+}
+#pills-home-tab{
+  margin-left: 230px;
+  margin-top: 10px;
+  color:#000080;
+  /* background-color: #050506!important; */
+}
+#pills-profile-tab{
+  margin-left: 15px;
+  margin-top: 10px;
+  color:#000080;
+  /* background-color: #050506;  */
+}
+#pills-contact-tab{
+  margin-left: 15px;
+  margin-top: 10px;
+  color:#000080;
+}
+.mb-3 .nav-item .active{
+   background-color:rgb(166, 77, 8);
+}
+
+/* ABOUT PAGE */
+
+* {
+    box-sizing: border-box;
+    font-family: Tahoma, Arial;
+    padding: 0px;
+    margin: 0px;
+}
+
+.slider-container {
+    width: 720px;
+    height: 480px;
+    margin: auto;
+    position: relative;
+}
+.slider-container .slides .slider-image {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    /* overflow: hidden; */
+}
+
+.slider-container .slides .slider-image img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+/* .slider-container .fade {
+    animation-name: fade;
+    animation-duration: 10s;
+} */
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+.slider-container .slides .slider-numbers {
+    position: absolute;
+    padding: 15px;
+    font-size: 15px;
+    color: #FFF
+}
+
+.slider-container .slides .slider-caption {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    color: #FFF;
+    padding: 10px;
+}
+
+.slider-container .prev,
+.slider-container .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.slider-container .next {
+    right: 0px;
+}
+
+.slider-container .prev:hover{
+    background: rgba(0, 0, 0, 0.6);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+.slider-container .next:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+}
+
+.slider-container .slider-bullets {
+    text-align: center;
+}
+
+.slider-container .slider-bullets .dots {
+    display: inline-block;
+    padding: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+
+.slider-container .slider-bullets .dots:hover {
+    background-color: #383838;
+    cursor: pointer;
+}
+
+.slider-container .slider-bullets .active {
+    background-color: #383838;
+}
+
+
+ul {
+    list-style: none; /* remove bullet points */
+    padding: 0; /* remove default padding */
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  li:last-child {
+    border-bottom: none; /* remove border on last item */
+  }
+
+  .list{
+    text-decoration: none;
+    padding: 250px;
+    color: black;
+  }
+  
